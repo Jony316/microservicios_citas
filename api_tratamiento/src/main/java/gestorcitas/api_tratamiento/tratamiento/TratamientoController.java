@@ -15,25 +15,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/tratamiento")
 @CrossOrigin({"*"})
 public class TratamientoController {
- @Autowired TratamientoService tratamientoService;
+ @Autowired TratamientoService TratamientoService;
  @GetMapping("/")
  public List<Tratamiento> findAll(){
- return tratamientoService.findAll();
+ return TratamientoService.findAll();
  }
  @GetMapping("/{id}")
  public Tratamiento findById(@PathVariable Long id){
- return tratamientoService.findById(id);
+ return TratamientoService.findById(id);
  }
- @PostMapping("/")
+ @PostMapping("/create")
  public Tratamiento save(@RequestBody Tratamiento entity){
- return tratamientoService.save(entity);
+ return TratamientoService.save(entity);
  }
- @PutMapping("/")
+ @PutMapping("/update")
  public Tratamiento update(@RequestBody Tratamiento entity){
- return tratamientoService.save(entity);
+ return TratamientoService.save(entity);
  }
- @DeleteMapping("/{id}/")
+ @DeleteMapping("/delete/{id}")
  public void deleteById(@PathVariable Long id){
- tratamientoService.deleteById(id);
+ TratamientoService.deleteById(id);
  }
 }

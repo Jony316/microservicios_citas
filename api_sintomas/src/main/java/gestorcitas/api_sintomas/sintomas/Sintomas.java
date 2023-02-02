@@ -1,6 +1,7 @@
 package gestorcitas.api_sintomas.sintomas;
 
-import java.time.LocalDate;
+import java.sql.Date;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +14,10 @@ public class Sintomas {
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
    private Long id;
-   private LocalDate fecha;
-   private String descripcion;
+   private String sintoma;
    private String diagnostico; 
+   private   Date  fechas;
+   private Long  fk_paciente;
+   private Long  fk_medico;
+  
 }

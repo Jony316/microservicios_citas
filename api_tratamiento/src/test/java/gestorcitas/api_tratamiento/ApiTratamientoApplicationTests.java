@@ -10,4 +10,9 @@ class ApiTratamientoApplicationTests {
 	void contextLoads() {
 	}
 
+    @Test
+    void testMain() {
+        
+    }
+
 }
